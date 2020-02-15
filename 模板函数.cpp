@@ -39,7 +39,7 @@ public:
 		cout << "析构结束" << endl;
 		delete p;
 	}
-	vec& operator=(const vec&tem)
+	vec& operator=(const vec&tem)//需要重载操作符 Vec_swap函数中的等号是进行浅拷贝 析构会出错
 	{
 		delete p;
 		p = new char[100];
